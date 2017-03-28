@@ -11,12 +11,12 @@ general {
         interval = 5
 }
 
-order += "ipv6"
 order += "disk /"
 order += "wireless _first_"
-order += "ethernet _first_"
+# order += "ethernet _first_"
 order += "battery all"
-order += "load"
+# order += "load"
+order += "cpu_temperatore 0"
 order += "tztime local"
 
 wireless _first_ {
@@ -40,6 +40,10 @@ tztime local {
 
 load {
         format = "%1min"
+}
+
+cpu_temperature 0 {
+        format = "T: %degrees °C"
 }
 
 disk "/" {
